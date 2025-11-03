@@ -109,7 +109,7 @@ export default function Navbar() {
                 >
                     {/* optional: click-outside to close; keep page scrollable */}
                     <div className="pointer-events-none">
-                        <div className="pointer-events-auto rounded-2xl bg-zinc-600/50 border border-white/30 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
+                        <div className="pointer-events-auto rounded-2xl bg-zinc-400/80 border border-white/30 text-black font-thin supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
                             <ul className="p-3">
                                 {LINKS.map((l) => (
                                     <li key={l.label}>
@@ -128,11 +128,11 @@ export default function Navbar() {
                                     </li>
                                 ))}
                                 <li className="mt-1 grid grid-cols-2 gap-2">
-                                    <button className="rounded-xl px-4 py-3 bg-zinc-100 text-axc.ink/90 flex items-center justify-center gap-2">
+                                    <button className="rounded-xl px-4 py-3 bg-zinc-100 text-black flex items-center justify-center gap-2">
                                         <Search size={16} /> Search
                                     </button>
                                     <button
-                                        className="rounded-xl px-4 py-3 bg-zinc-100 text-axc.ink/90 flex items-center justify-center gap-2"
+                                        className="rounded-xl px-4 py-3 bg-zinc-100 text-black flex items-center justify-center gap-2"
                                         onClick={() => {
                                             setBoxOpen(true);
                                             setOpen(false); // close drawer
