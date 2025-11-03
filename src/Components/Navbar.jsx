@@ -109,7 +109,7 @@ export default function Navbar() {
                 >
                     {/* optional: click-outside to close; keep page scrollable */}
                     <div className="pointer-events-none">
-                        <div className="pointer-events-auto rounded-2xl bg-zinc-600/20 border border-white/30 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
+                        <div className="pointer-events-auto rounded-2xl bg-zinc-600/50 border border-white/30 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
                             <ul className="p-3">
                                 {LINKS.map((l) => (
                                     <li key={l.label}>
@@ -119,7 +119,7 @@ export default function Navbar() {
                                             className={({ isActive }) =>
                                                 "block rounded-xl px-4 py-3 " +
                                                 (isActive
-                                                ? "bg-zinc-100/80 text-axc.ink"
+                                                ? "bg-zinc-100/40 text-axc.ink"
                                                 : "text-axc.ink/80 hover:bg-white/60")
                                             }
                                         >

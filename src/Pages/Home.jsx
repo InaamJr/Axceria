@@ -141,20 +141,12 @@ function BackgroundDecor() {
 // ---- Sections -------------------------------------------------------------
 function Hero() {
   return (
-    <section data-testid="hero" className="relative h-[90svh] flex items-stretch p-3 sm:p-4 md:p-6">
+    <section data-testid="hero" className="relative h-[90dvh] flex items-stretch p-3 sm:p-4 md:p-6">
       <BackgroundDecor />
-      <div
-        className={cn(
-          "absolute inset-0",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-        )}
-      />
 
       <Glass data-testid="hero-frame" className="w-full h-full">
         <div className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-8 p-8 sm:p-24 h-full">
-          {/* NEW: Mobile-only visual placeholder to fill the space */}
-          <motion.div
+          {/* <motion.div
             variants={fadeUp}
             initial="initial"
             whileInView="animate"
@@ -163,7 +155,6 @@ function Hero() {
           >
             <div className="w-full max-w-sm h-72 sm:h-80 rounded-3xl p-px bg-gradient-to-br from-[#F1E2CA] via-[#E6CFAF] to-[#C9A878]">
               <div className="rounded-[calc(1.5rem-1px)] overflow-hidden bg-white/45 backdrop-blur-xl">
-                {/* You can replace this with a better image/collage */}
                 <img
                   src="/images/chain_hr2.jpg" // Use one of your product images
                   alt="Featured Axceria Product"
@@ -171,7 +162,7 @@ function Hero() {
                 />
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Left: Copy */}
           <motion.div
@@ -203,7 +194,7 @@ function Hero() {
               className="mt-4 max-w-xl text-base sm:text-lg text-axc.ink/70"
             >
               Crafted metals, refined silhouettes, and a finish that catches the
-              light. Axceria pieces are designed to be noticed—and made to last.
+              light. Axceria pieces are designed to be noticed-and made to last.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
@@ -219,8 +210,8 @@ function Hero() {
               className="mt-8 grid grid-cols-3 text-sm text-axc.ink/70"
             >
               {/* <li className="flex items-center gap-2"><ShieldCheck size={16}/> 1-year warranty</li> */}
-              <li className="flex items-center gap-2"><Clock3 size={16}/> Fast dispatch</li>
-              <li className="flex items-center gap-2"><Star size={16}/> 4.9 reviews</li>
+              {/* <li className="flex items-center gap-2"><Clock3 size={16}/> Fast dispatch</li>
+              <li className="flex items-center gap-2"><Star size={16}/> 4.9 reviews</li> */}
             </motion.ul>
           </motion.div>
 
@@ -283,26 +274,26 @@ function FloatingCard({ className = "", title, caption, imageSrc, delay = 0 }) {
         className
       }
     >
-        <div className="rounded-[1rem] bg-white/60 dark:bg-white/10 backdrop-blur-xl p-4">
-            <div className="flex items-center gap-2 text-axc.ink/80">
-                <Wand2 size={18} />
-                <span className="text-sm font-semibold tracking-wide">{title}</span>
-            </div>
-            <p className="mt-2 text-xs text-axc.ink/70">{caption}</p>
-            <div className="mt-4 h-30 rounded-xl bg-gradient-to-br from-axc.blush/40 via-white/10 to-axc.gold/30">
-                {imageSrc && (
-                    <img 
-                    src={imageSrc} 
-                    alt={title} 
-                    className="w-full h-full object-cover" 
-                    />
-                )}
-                {/* Fallback/Placeholder if no imageSrc is provided */}
-                {!imageSrc && (
-                    <div className="w-full h-full bg-gradient-to-br from-axc.blush/40 via-white/10 to-axc.gold/30" />
-                )}
-            </div>
+      <div className="rounded-[1rem] bg-white/60 dark:bg-white/10 backdrop-blur-xl p-4">
+        <div className="flex items-center gap-2 text-axc.ink/80">
+            <Wand2 size={18} />
+            <span className="text-sm font-semibold tracking-wide">{title}</span>
         </div>
+        <p className="mt-2 text-xs text-axc.ink/70">{caption}</p>
+        <div className="mt-4 h-30 rounded-xl bg-gradient-to-br from-axc.blush/40 via-white/10 to-axc.gold/30">
+          {imageSrc && (
+            <img 
+              src={imageSrc} 
+              alt={title} 
+              className="w-full h-full object-cover" 
+            />
+          )}
+          {/* Fallback/Placeholder if no imageSrc is provided */}
+          {!imageSrc && (
+              <div className="w-full h-full bg-gradient-to-br from-axc.blush/40 via-white/10 to-axc.gold/30" />
+          )}
+        </div>
+      </div>
     </motion.div>
   );
 }

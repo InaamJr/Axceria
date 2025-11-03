@@ -97,16 +97,16 @@ export default function Contact() {
   return (
     <div className="min-h-screen text-zinc-900">
       {/* --- Hero --- */}
-      <section className="relative overflow-hidden -mt-[92px] h-[70vh] md:h-[70vh]">
+      <section className="relative overflow-hidden -mt-[92px] h-[85vh] md:h-[70vh]">
         {/* Background: Deeper, Warmer Gold/Cream Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FFFDFB] via-[#F8F5EE] to-[#EAE0CD] opacity-90" />
+        <div className="hidden lg:flex absolute inset-0 bg-gradient-to-b from-[#FFFDFB] via-[#F8F5EE] to-[#EAE0CD] opacity-90" />
         
         {/* Optional: Subtle Texture Overlay for Depth */}
         <div className="absolute inset-0 z-0 opacity-10" 
             style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C9288' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")` }} 
         />
 
-        <div className="relative z-10 mx-auto mt-20 max-w-6xl px-12 pt-[12rem] pb-[8rem] text-center">
+        <div className="relative z-10 mx-auto lg:mt-24 mt-72 max-w-6xl px-8 lg:py-52 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
