@@ -16,4 +16,4 @@ A luxury-themed React + Tailwind showcase site for **Axceria**, a boutique brand
 
 ---
 
-Developed by [Inaam Ahamed (Jr)](https://github.com/inaamahamed)
+Developed by [Inaam Ahamed (Jr)](https://inaamjr.vercel.app/)
